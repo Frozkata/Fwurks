@@ -110,6 +110,132 @@
 			</ul>
 
 	<h3 id="beginning-folder_strucuture">Folder Structure</h3>
+	<ul class="tree">
+		<li class="source-file"><strong>index.php</strong> - The dispatcher that starts the framwork. System paths can be changed here: public, back ,system, application. Admin only application can be set from here.</li>
+		<li class="source-file"><strong>.htacces</strong> - holds base rewrite rule and other site specific rewrites.</li>
+		<li>
+			<strong>resources</strong> - Resources of all applications - files, javascripts, styles, etc. The path to this folder can be changed in the Dispatcher (index.php).
+			<ul>
+				<li>
+					<strong>application_path</strong> - Resources of an application. The path to this folder can be changed in the system/application_name/configs/Application.config.php.
+					<ul>
+						<li>
+							<strong>files</strong>
+						</li>
+						<li>
+							<strong>atom_path</strong>
+							<ul>
+								<li><strong>javascripts</strong>- Javascripts.</li>
+								<li><strong>styles</strong> - CSS.</li>
+							</ul>
+						</li>
+						<li><strong>atom_path<br/>...</strong></li>
+					</ul>
+				<li><strong>application_path</strong>  - Resources of an application. The path to this folder can be changed in the Application.config.php.<br/>...</li>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<strong>system</strong> - The whole system lies here. This is the default name. The path to this folder can be changed in the Dispatcher (index.php). 
+			<ul>
+				<li>
+					<strong>application_name</strong> - This is where an application is placed. The path to this folder can be changed in the Dispatcher (index.php).
+					<ul>
+						<li>
+							<strong>atoms</strong>
+							<ul>
+								<li class="source-file"><strong>application.controller.php</strong></li>
+								<li>
+									<strong>atom_name</strong>
+									<ul>
+										<li>
+											<strong>configs</strong> - Config files for an atom.
+											<ul>
+												<li class="source-file"><strong>Atom.config.php</strong></li>
+												<li class="source-file"><strong>Routes.config.php</strong></li>
+											</ul>
+										</li>
+										<li>
+											<strong>controllers</strong> - Controllers for an atom.
+											<ul>
+												<li class="source-file"><strong>atom.controller.php</strong></li>
+												<li class="source-file"><strong>home.controller.php</strong></li>
+											</ul>
+										</li>
+										<li><strong>library</strong> - Library for an atom.</li>
+										<li>
+											<strong>temp</strong>
+											<ul>
+												<li><strong>tpl_compile</strong> - Compiled templates.</li>
+											</ul>
+										</li>
+										<li>
+											<strong>views</strong> - Viewing the templates.
+											<ul>
+												<li class="source-file"><strong>layout.html</strong></li>
+												<li>
+													<strong>home</strong>
+													<ul>
+														<li class="source-file"><strong>404.html</strong> - Error.</li>
+														<li class="source-file"><strong>index.html</strong></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><strong>atom_name</strong><br/>...</li>
+							</ul>
+						</li>
+						<li>
+							<strong>configs</strong> - This is where the config files of an application are placed.
+							<ul>
+								<li class="source-file"><strong>Application.config.php</strong></li>
+								<li class="source-file"><strong>Database.config.php</strong></li>
+								<li class="source-file"><strong>Session.config.php</strong></li>
+							</ul>
+						</li>
+						<li>
+							<strong>models</strong> - This is where the models of an application are placed.
+							<ul>
+								<li class="source-file"><strong>ApplicationModel.php</strong></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><strong>application_name</strong> - Here you can find the application. The path to this folder can be changed in the Dispatcher (index.php).<br/>...</li>
+				<li>
+					<strong>configs</strong> - Config files for the framework. The path to this folder can be changed in the Dispatcher (index.php).
+					<ul>
+						<li class="source-file"><strong>Paths.config.php</strong></li>
+						<li class="source-file"><strong>System.config.php</strong></li>
+					</ul>
+				</li>
+				<li>
+					<strong>library</strong> - Framework library. The path to this folder can be changed in the Dispatcher (index.php).
+					<ul>
+						<li>
+							<strong>template</strong>
+							<ul>
+								<li>
+									<strong>smarty</strong>
+								</li>
+								<li class="source-file"><strong>Template.php</strong></li>
+							</ul>
+						</li>
+						<li class="source-file"><strong>AutoLoader.php</strong></li>
+						<li class="source-file"><strong>BaseController.php</strong></li>
+						<li class="source-file"><strong>Core.php</strong></li>
+						<li class="source-file"><strong>Inflector.php</strong></li>
+						<li class="source-file"><strong>Router.php</strong></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	
+	
+	<!-- h3 id="beginning-folder_strucuture">Folder Structure</h3>
 		<ul class="tree">
 			<li class="source-file"><strong>index.php</strong> - The dispatcher that starts the framwork. System paths can be changed here: public, back ,system, application. Admin only application can be set from here.</li>
 			<li class="source-file"><strong>.htacces</strong> - holds base rewrite rule and other site specific rewrites.</li>
@@ -201,7 +327,7 @@
 					<li><strong>library</strong> - Here are placed the framework libraries</li>
 				</ul>
 			</li>
-		</ul>
+		</ul -->
 
 	<h3 id="beginning-conventions">Conventions</h3>
 
